@@ -1,5 +1,9 @@
 # IoT-Based Online Electronics Lab
 
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Python Version](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/SasiriChathurika/rotation-angle-detection-for-pick-place-robots/blob/main/CONTRIBUTING.md)
+
 ## Overview
 
 This project implements an IoT-based online electronics lab, allowing students to remotely conduct experiments using real electronic components controlled via a Raspberry Pi 4 server. A Flask web application provides a user interface to control the experiment parameters and visualize the results.
