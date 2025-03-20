@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Electronics Lab</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Online Electronics Lab</h1>
+    <form id="experimentForm">
+        <label for="l_value">Inductor (L):</label>
+        <select name="l_value" id="l_value">
+            <option value="L1">L1 (4.7 µH)</option>
+            <option value="L2">L2 (10 µH)</option>
+            <option value="L3">L3 (15 µH)</option>
+            <option value="L4">L4 (100 µH)</option>
+        </select><br><br>
+        <label for="c_value">Capacitor (C):</label>
+        <select name="c_value" id="c_value">
+            <option value="C1">C1 (0.33 µF)</option>
+            <option value="C2">C2 (1 µF)</option>
+            <option value="C3">C3 (3.3 µF)</option>
+            <option value="C4">C4 (33 µF)</option>
+        </select><br><br>
+        <label for="r_value">Resistor (R):</label>
+        <select name="r_value" id="r_value">
+            <option value="R1">R1 (2 kΩ)</option>
+            <option value="R2">R2 (2.2 kΩ)</option>
+            <option value="R3">R3 (22 kΩ)</option>
+            <option value="R4">R4 (100 kΩ)</option>
+        </select><br><br>
+        <label for="frequency">Frequency:</label>
+        <input type="number" name="frequency" id="frequency" value="1000"><br><br>
+        <input type="hidden" name="switch_config" id="switch_config">
+        <button type="button" onclick="runExperiment()">Run Experiment</button>
+        <button type="button" onclick="stopExperiment()">Stop Experiment</button>
+    </form>
+    <div id="plotContainer">
+        <img id="plotImage" src="" alt="Output Signal Plot">
+    </div>
+    <script>
+        function runExperiment() {
+            const l_value = document.getElementById('l_value').value;
+            const c_value = document.getElementById('c_value').value;
+            const r_value = document.getElementById('r_value').value;
+            document.getElementById('switch_config').value = `${l_value},${c_value},${r_value}`;
+            fetch('/run_experiment', {
+                method: 'POST',
+                body: new FormData(document.getElementById('experimentForm'))
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    alert('Error: ' + data.error);
+                } else {
+                    console.log(data.status);
+                    updatePlot();
+                }
+            });
+        }
+        function stopExperiment() {
+            fetch('/stop_experiment', {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    alert('Error: ' + data.error);
+                } else {
+                    console.log(data.status);
+                }
+            });
+        }
+        function updatePlot() {
+            document.getElementById('plotImage').src = '/get_plot?' + new Date().getTime();
+        }
+    </script>
+</body>
+</html>
