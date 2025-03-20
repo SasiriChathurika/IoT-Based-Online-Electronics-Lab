@@ -13,13 +13,13 @@ MCP_SCRIPT = "only_MCP.py"
 # --- Helper Functions ---
 
 
-def run_script(script_path):
+def run_script(script_path, args=[]):
     """
     Runs a Python script in a separate process.
     """
     try:
         process = subprocess.Popen(
-            ["python", script_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            ["python", script_path] + args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         return process
     except FileNotFoundError:
         print(f"Error: Script not found at {script_path}")
@@ -85,7 +85,7 @@ def run_experiment():
 
     # Run scripts
     try:
-        switching_process = run_script(SWITCHING_SCRIPT)
+        switching_process = run_script(SWITCHING_SCRIPT, list(switch_config))
         mcp_process = run_script(MCP_SCRIPT)
         ads_process = run_script(ADS_SCRIPT)
 
