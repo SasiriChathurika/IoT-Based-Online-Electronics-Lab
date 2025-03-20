@@ -27,7 +27,7 @@ This project implements an IoT-based online electronics lab, allowing students t
 
 ## System Architecture
 
-# (<img src="project_images/system-architecture.png" alt="System Architecture Diagram" width="600"/>)
+# <img src="project_images/system-architecture.png" alt="System Architecture Diagram" width="600"/>
 
 The system comprises the following key components:
 
@@ -129,7 +129,7 @@ The following LRC values are available for selection through the web interface. 
 
 4.  **Connect the electronic components according to the circuit diagram.**  *Important: Double-check your wiring before powering on the system.*
 
-    # (<img src="project_images/Remote-Lab-system-image.png" alt="Circuit Diagram" width="800"/>)
+    # <img src="project_images/Remote-Lab-system-image.png" alt="Circuit Diagram" width="800"/>
 
 5.  **Run the Python scripts in separate terminals:**
 
