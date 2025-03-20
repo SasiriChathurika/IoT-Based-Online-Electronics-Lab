@@ -4,6 +4,25 @@
 [![Python Version](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/SasiriChathurika/rotation-angle-detection-for-pick-place-robots/blob/main/CONTRIBUTING.md)
 
+## Table of Contents
+
+1.  [Overview](#overview)
+2.  [Functionality](#functionality)
+3.  [System Architecture](#system-architecture)
+4.  [Hardware Requirements](#hardware-requirements)
+5.  [Software Requirements](#software-requirements)
+6.  [LRC Values](#lrc-values)
+7.  [Installation and Setup](#installation-and-setup)
+    *   [Dependencies](#dependencies)
+    *   [Installing Dependencies](#installing-dependencies)
+    *   [Steps](#steps)
+8.  [Usage](#usage)
+9.  [Code Structure](#code-structure)
+10. [Troubleshooting](#troubleshooting)
+11. [Future Improvements](#future-improvements)
+12. [License](#license)
+13. [Acknowledgements](#acknowledgements)
+
 ## Overview
 
 This project implements an IoT-based online electronics lab, allowing students to remotely conduct experiments using real electronic components controlled via a Raspberry Pi 4 server. A Flask web application provides a user interface to control the experiment parameters and visualize the results.
@@ -99,11 +118,29 @@ The following LRC values are available for selection through the web interface. 
 
 ## Installation and Setup
 
-1.  **Clone the repository:**
+### Dependencies
+
+The project relies on the following software dependencies:
+
+*   **Python Packages:**
+    *   Flask
+    *   Adafruit ADS1x15
+    *   RPi.GPIO
+    *   spidev
+    *   Matplotlib
+    *   FilterPy
+    *   NumPy
+
+### Installing Dependencies
+
+It is highly recommended to use a virtual environment to manage project dependencies.
+
+1.  **Create a virtual environment (optional but recommended):**
 
     ```bash
-    git clone [repository URL]
-    cd [repository directory]
+    python3 -m venv venv
+    source venv/bin/activate  # On Linux/macOS
+    venv\Scripts\activate  # On Windows
     ```
 
 2.  **Install Python dependencies:**
@@ -123,6 +160,17 @@ The following LRC values are available for selection through the web interface. 
     filterpy
     numpy
     ```
+
+### Steps
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone [repository URL]
+    cd [repository directory]
+    ```
+
+2.  **Install Python dependencies:** (See "Installing Dependencies" above)
 
 3.  **Enable SPI interface on Raspberry Pi:**
 
