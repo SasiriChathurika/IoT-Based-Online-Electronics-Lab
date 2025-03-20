@@ -197,6 +197,10 @@ It is highly recommended to use a virtual environment to manage project dependen
 
     *Detail the specifics of your Flask application setup here.  Include the port it runs on.*
 
+    <img src="project_images/web-interface.png" alt="Web Interface" width="600"/>
+    <img src="project_images/running.png" alt="Running the Server" width="600"/>
+    <img src="project_images/output.png" alt="Output Plot" width="600"/>
+
 ## Usage
 
 1.  Open a web browser and navigate to the address of the Flask web application (e.g., `http://<Raspberry Pi IP address>:5000`).
