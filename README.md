@@ -27,9 +27,7 @@ This project implements an IoT-based online electronics lab, allowing students t
 
 ## System Architecture
 
-[//]: # (<img src="project_images/system-architecture.png" alt="System Architecture Diagram" width="600"/>)
-*Replace this with a diagram of your entire system. A block diagram showing the flow of information from the web interface, through the Raspberry Pi, to the components, and back, would be ideal.*
-***Add the image into the same directory where the README.md file is located and replace the `path/to/system_architecture.png` accordingly***
+# (<img src="project_images/system-architecture.png" alt="System Architecture Diagram" width="600"/>)
 
 The system comprises the following key components:
 
@@ -131,7 +129,7 @@ The following LRC values are available for selection through the web interface. 
 
 4.  **Connect the electronic components according to the circuit diagram.**  *Important: Double-check your wiring before powering on the system.*
 
-    [//]: # (<img src="project_images/Remote-Lab-system-image.png" alt="Circuit Diagram" width="800"/>)
+    # (<img src="project_images/Remote-Lab-system-image.png" alt="Circuit Diagram" width="800"/>)
 
 5.  **Run the Python scripts in separate terminals:**
 
