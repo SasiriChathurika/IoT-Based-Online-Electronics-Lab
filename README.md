@@ -236,8 +236,19 @@ It is highly recommended to use a virtual environment to manage project dependen
 
 ## License
 
-[Specify your license here, e.g., MIT License]
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Acknowledgements
 
-*   [Acknowledge any libraries, tools, or individuals that contributed to the project.]
+We would like to express our sincere gratitude to the following:
+
+*   **The Python Software Foundation:** For developing and maintaining the Python programming language, which is the foundation of this project.
+*   **The Flask Team:** For creating the Flask web framework, which enables the creation of the web interface for this online lab.
+*   **Adafruit Industries:** For providing the Adafruit ADS1x15 library, which simplifies communication with the ADS1115 ADC.
+*   **The RPi.GPIO Library Developers:** For creating the RPi.GPIO library, which allows us to easily control the GPIO pins on the Raspberry Pi.
+*   **The Spidev Library Developers:** For the spidev library that enables SPI communication with the MCP4131.
+*   **The Matplotlib Team:** For developing Matplotlib, a powerful plotting library used to visualize the output signal.
+*   **The FilterPy Team:** For the FilterPy library, which provides Kalman filtering capabilities for noise reduction.
+*   **The NumPy Team:** For developing NumPy, a fundamental package for scientific computing with Python.
+
+We also acknowledge the open-source community for their contributions to the libraries and tools used in this project. Their work has been invaluable in making this project possible.
